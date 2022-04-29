@@ -58,4 +58,9 @@ micronaut {
     }
 }
 
-
+test {
+    reports {
+        junitXml.enabled(true)
+        html.enabled(false)
+    }
+}
