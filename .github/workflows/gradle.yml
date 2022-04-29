@@ -29,15 +29,5 @@ jobs:
         uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
         with:
           arguments: build
-    publish-reports:
-      name: "Publish Unit Tests Results"
-      needs: build
-      runs-on: ubuntu-latest
-      steps:
-        - name: Publish Unit Test Results
-          uses: EnricoMi/publish-unit-test-result-action@v1
-          if: always()
-          with:
-            files: "**/TEST-*.xml"
 
 
